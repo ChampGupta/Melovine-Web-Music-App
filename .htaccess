@@ -1,6 +1,0 @@
-# Allow access to all files in the songs directory and its subdirectories
-Options +Indexes
-<FilesMatch "\.(html|htm|php|css|js|jpeg|json|jpg|gif|svg|mp3)$">
-    Order allow,deny
-    Allow from all
-</FilesMatch>
