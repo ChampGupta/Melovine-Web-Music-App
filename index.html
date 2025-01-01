@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melovine - Web Music App</title>
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/utility.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container bg-black">
+      <div class="left bg-black">
+        <div class="home bg-grey rounded">
+          <div class="top">
+            <div class="close"><img src="svg/close.svg" alt="close"></div>
+          </div>
+          <ul>
+            <li><img src="svg/home.svg" alt="home" class="invert">Home</li>
+            <li><img src="svg/search.svg" alt="search" class="invert">Search</li>
+          </ul>
+        </div>
+        <div class="bg-grey rounded lower">
+        <div class="library">
+          <div class="heading">
+            <div>
+            <img src="svg/library.svg" alt="libraryIcon" class="invert" id="lib">
+            <h4>Your Library</h4>
+          </div>
+            <img src="svg/plus.svg" alt="addPlaylist" class="invert" id="plusimg">
+          </div>
+        </div>
+        <div class="songList">
+          <ul>
+            <!-- <li>
+              <img src="music.svg" class="invert">
+              <div id="info">
+                <div>Song Name</div>
+                <div>Song Artist</div>
+              </div>
+              <img src="playnow.svg" class="invert">
+            </li> -->
+          </ul>
+        </div>
+        <div class="footer">
+          <a href="">
+            <span>Legal</span>
+          </a>
+          <div>
+            <a href="" >
+              <span>Safety & Privacy Center</span>
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <span>Privacy Policy</span>
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <span>Cookies</span>
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <span>About Ads</span>
+            </a>
+          </div>
+          <div>
+            <a href="">
+              <span>Accessibility</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="right bg-black">
+        <div class="rightContent bg-grey rounded">
+        <nav class="bg-grey rounded">
+          <button id="hamburger"><img src="svg/hamburger.svg"></button>
+          <div class="toggle">
+            <button class="toggleButton"><img src="svg/leftButton.svg"></button>
+            <button class="toggleButton"><img src="svg/rightButton.svg"></button>
+          </div>
+          <div class="proof">
+            <button id="signUp">Sign up</button>
+            <button id="logIn">Log in</button>
+          </div>
+        </nav>
+        <div id="melovinePlaylist">
+          <h1>Melovine Playlists</h1>
+          <div class="cardContainer">
+            
+          </div>
+          <div class="playBar">
+            <div class="seekbar">
+              <div class="circle"></div>
+            </div>
+            <div class="songinfo"></div>
+            <div class="cntbtn">
+              <button class="controls">
+              <img id="previous" src="svg/prevIcon.svg">
+            </button>
+            <button class="controls">
+              <img id="play" src="svg/play.svg">
+            </button>
+            <button class="controls">
+              <img id="next" src="svg/nextIcon.svg">
+            </button>
+            </div>
+            <div class="playLeft">
+              <div class="songtime"></div>
+              <div class="volume invert">
+                <img src="svg/volume.svg">
+                  <!-- <div class="volumeCircle"></div> -->
+                   <input type="range" name="volume" id="volumeBar">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="JavaScript/script.js"></script>
+  </body>
+</html>
