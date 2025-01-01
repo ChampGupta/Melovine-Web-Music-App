@@ -59,7 +59,7 @@ function formatTime(seconds) {
 }
 
 async function displayAlbums(){
-    let a=await fetch(`/songs/`);
+    let a=await fetch(`/public/songs/`);
     let response=await a.text();
     let div=document.createElement("div");
     div.innerHTML=response;
@@ -72,13 +72,13 @@ async function displayAlbums(){
         if(e.href.includes("/songs")&&e.href.endsWith("/")){
             let folder=e.href.split("/").splice(-2)[0]
             //Get the metadata of the folder
-            let a=await fetch(`/songs/${folder}/info.json`);
+            let a=await fetch(`/public/songs/${folder}/info.json`);
             let response=await a.json();
             cardContainer.innerHTML+=`<div data-folder="${folder}" class="card">
               <span class="play">
                 <img src="svg/play.svg" class="triangle">
               </span>
-              <img src="/songs/${folder}/cover.jpeg">
+              <img src="/public/songs/${folder}/cover.jpeg">
               <h2>${response.title}</h2>
               <p>${response.description}</p>
             </div>`
@@ -88,7 +88,7 @@ async function displayAlbums(){
      //Load the playlist  when card is clicked
    Array.from(document.getElementsByClassName("card")).forEach(e=>{
     e.addEventListener("click",async item=>{
-        songs=await getSongs(`songs/${item.currentTarget.dataset.folder}`);
+        songs=await getSongs(`public/songs/${item.currentTarget.dataset.folder}`);
         playMusic(songs[0].replace(".mp3",""))
     })
    })
@@ -97,7 +97,7 @@ async function displayAlbums(){
 async function main(){
 
     //List of all the songs in playlist
-    await getSongs("songs/EnglishLofiSong");
+    await getSongs("public/songs/EnglishLofiSong");
     playMusic(songs[0].replace(".mp3",""),true)
 
     //Display all the albums on the page
