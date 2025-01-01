@@ -1,5 +1,5 @@
-# Allow access to all files
-<Files *>
-    Order Allow,Deny
+# Allow access to all files in this directory
+<FilesMatch "\.(html|htm|php|css|js|jpeg|json|jpg|gif|svg|mp3)$">
+    Order allow,deny
     Allow from all
-</Files>
+</FilesMatch>
