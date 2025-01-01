@@ -1,0 +1,5 @@
+# Allow access to all files
+<Files *>
+    Order Allow,Deny
+    Allow from all
+</Files>
