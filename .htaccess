@@ -1,0 +1,5 @@
+# Allow access to all files in the songs directory
+<Directory "/songs">
+    Order Allow,Deny
+    Allow from all
+</Directory>
